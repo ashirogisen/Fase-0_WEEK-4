@@ -13,15 +13,16 @@ function prima (angka) {
     //Validation
     if (angka > 1) {
         if (countNotPrima > 0) {
-            console.log('Bilangan Bukan Prima');
+            return 'Bilangan Bukan Prima'
         }
         else {
-            console.log('Bilangan Prima');
+            return 'Bilangan Prima'
         }
     } else {
-        console.log('Bilangan Bukan Prima');
+        return 'Bilangan Bukan Prima'
     }
 
 }
 
-prima(9);
+console.log(prima(2));
+
