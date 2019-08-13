@@ -4,21 +4,15 @@ function deepSum (arr) {
 
     //Calculate Total
     for (var i = 0; i < arr.length; i++) {
-        console.log(arr.length);
         for (var j = 0; j < arr[i].length; j++) {
-            console.log(arr[i].length);
             for (var k = 0; k < arr[i][j].length; k++) {
-                console.log(arr[i][j].length);
                 total = total + arr[i][j][k]
             }
         }
     }
 
     //Validation
-    if (arr.length === 0) {
-        return ''
-    }
-    else { 
+    if (arr.length > 0) {
         return total
     }
 }

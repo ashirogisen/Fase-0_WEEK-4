@@ -1,5 +1,6 @@
 function changeMe(arr) {
     // you can only write your code here!
+    var x = ''
     for (var i = 0; i < arr.length; i++) {
         for(var j = 0; j < arr.length; j++) {
             var obj = {
@@ -12,9 +13,11 @@ function changeMe(arr) {
                 arr[i][3] = 'Invalid Birth Year'
             }
         }
-        print_obj = console.log(obj);
+        console.log(obj);
     }
-    return print_obj;
+    if (arr.length === 0) {
+        console.log('');
+    }
 }
 
   
@@ -30,4 +33,4 @@ function changeMe(arr) {
   //   lastName: 'Downey',
   //   gender: 'Male',
   //   age: 'Invalid Birth Year' }
-//   changeMe([]); // ""
+  changeMe([]); // ""

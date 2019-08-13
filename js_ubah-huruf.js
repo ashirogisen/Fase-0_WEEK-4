@@ -1,8 +1,10 @@
 function ubahHuruf(kata) {
     // you can only write your code here!
-    var huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o' ,'p' ,'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o' ,'p' ,'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a'];
     var huruf_array = [];
 
+    console.log(kata[0]);
+    
     for (var i = 0; i < kata.length; i++) {
         huruf_array.push(kata[i])
     }
@@ -28,3 +30,5 @@ function ubahHuruf(kata) {
   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
   console.log(ubahHuruf('keren')); // lfsfo
   console.log(ubahHuruf('semangat')); // tfnbohbu
+
+  

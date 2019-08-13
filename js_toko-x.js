@@ -3,7 +3,7 @@ function countProfit(shoppers) {
                        ['Baju Zoro', 500000, 2],
                        ['Sweater Uniklooh', 175000, 1]
                      ];
-
+    var arr_object = []
     //Preparation to return the value at the end of function and a declaration for object
     for (var i = 0; i < listBarang.length; i++) {
       var data = {
@@ -16,20 +16,24 @@ function countProfit(shoppers) {
       data.product = listBarang[i][0];
       data.leftOver = listBarang[i][2];
 
+
       //Push customer's name to shopping-data (array in object)
       for (var j = 0; j < shoppers.length; j++) {
         if (shoppers[j].product === data.product) {
           if (shoppers[j].amount <= data.leftOver) {
+            data.leftOver = data.leftOver - shoppers[j].amount;
             data.shoppers.push(shoppers[j].name);
-          } 
+            data.totalProfit = data.totalProfit + listBarang[i][1] * shoppers[j].amount;
+          }
         }
       }
-      //Validation
-      if (shoppers.length === 0) {
-        return '';
-      } else {
-        return [data];
+        arr_object.push(data);
       }
+      //Validation
+    if (shoppers.length === 0) {
+      return [];
+    } else {
+      return arr_object;
     }
   }
   
