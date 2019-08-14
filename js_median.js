@@ -7,8 +7,8 @@ function cariMedian(arr) {
         var jarak_ganjil = a + 1;
         return arr[jarak_ganjil-1] //Because the index starts from 0
     } else { //Condition for arr.length = evens
-        var a = (arr.length/2) + 1;
-        var jarak_genap = ((arr[(arr.length/2)-1]) + arr[a-1])/2
+        var a = (arr.length/2);
+        var jarak_genap = ((arr[a-1]) + arr[a])/2
         return jarak_genap;
     }
   }

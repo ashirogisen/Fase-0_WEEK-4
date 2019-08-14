@@ -1,6 +1,6 @@
 function ubahHuruf(kata) {
     // you can only write your code here!
-    var huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o' ,'p' ,'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a'];
+    var huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o' ,'p' ,'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var huruf_array = [];
 
     console.log(kata[0]);
@@ -11,11 +11,15 @@ function ubahHuruf(kata) {
     console.log(huruf_array);
     
     var index = 0;
-    for (var i = 0; i < huruf.length; i++) {
+    for (var i = 0; i < huruf_array.length; i++) {
         for (var j = 0; j < huruf.length; j++) {
             if (huruf_array[index] === huruf[j]) {
                 huruf_array[index] = huruf[j+1]
                 index++
+                if (huruf_array[index] === 'z') {
+                    huruf_array[index] = huruf[0]
+                    index++
+                } 
             }
         }
         
@@ -25,10 +29,10 @@ function ubahHuruf(kata) {
   }
   
   // TEST CASES
-  console.log(ubahHuruf('wow')); // xpx
-  console.log(ubahHuruf('developer')); // efwfmpqfs
-  console.log(ubahHuruf('javascript')); // kbwbtdsjqu
-  console.log(ubahHuruf('keren')); // lfsfo
-  console.log(ubahHuruf('semangat')); // tfnbohbu
+  console.log(ubahHuruf('wowza')); // xpx
+//   console.log(ubahHuruf('developer')); // efwfmpqfs
+//   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
+//   console.log(ubahHuruf('keren')); // lfsfo
+//   console.log(ubahHuruf('semangat')); // tfnbohbu
 
   
