@@ -10,17 +10,18 @@ function ubahHuruf(kata) {
     }
     console.log(huruf_array);
     
-    var index = 0;
+    // var index = 0;
     for (var i = 0; i < huruf_array.length; i++) {
         for (var j = 0; j < huruf.length; j++) {
-            if (huruf_array[index] === huruf[j]) {
-                huruf_array[index] = huruf[j+1]
-                index++
-                if (huruf_array[index] === 'z') {
-                    huruf_array[index] = huruf[0]
-                    index++
-                } 
+            if (huruf_array[i] === huruf[j]) {
+                huruf_array[i] = huruf[j+1]
+                // index++
+                break;
             }
+            if (huruf_array[i] === 'z') {
+                huruf_array[i] = huruf[0]
+                // index++
+            } 
         }
         
     }
@@ -30,9 +31,9 @@ function ubahHuruf(kata) {
   
   // TEST CASES
   console.log(ubahHuruf('wowza')); // xpx
-//   console.log(ubahHuruf('developer')); // efwfmpqfs
-//   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
-//   console.log(ubahHuruf('keren')); // lfsfo
-//   console.log(ubahHuruf('semangat')); // tfnbohbu
+  console.log(ubahHuruf('developer')); // efwfmpqfs
+  console.log(ubahHuruf('javascript')); // kbwbtdsjqu
+  console.log(ubahHuruf('keren')); // lfsfo
+  console.log(ubahHuruf('semangat')); // tfnbohbu
 
   

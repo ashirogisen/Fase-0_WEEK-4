@@ -14,6 +14,8 @@ function deepSum (arr) {
     //Validation
     if (arr.length > 0) {
         return total
+    } else {
+        return 'No Number' 
     }
 }
   
